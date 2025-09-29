@@ -1,23 +1,29 @@
-
 <section>
-    <h1>Sign Up</h1>
-    <% if (message) { %>
-        <p><%= message %></p>
-    <% } %>
-    <form action="/user/signup" method="post">
-        <input type="text" name="username" placeholder="Username" autocomplete="off" required><br><br>
-        <input type="email" name="email" placeholder="Email" autocomplete="off" required><br><br>
-        <input type="password" name="password" placeholder="Password" autocomplete="off" required><br><br>
-        <input type="password" name="cpassword" placeholder="Confirm Password" autocomplete="off" required><br><br>
-        <div class="g-recaptcha" data-sitekey="6LflLRIqAAAAAHrbmeUx3WThRxp7On8iAQQOIQWH"></div>
-        <button type="submit" class="btn btn-light"><strong>Sign Up</strong></button>
-    </form>
-    <br>
-    <!-- Sign-up Google Auth -->
-    <a href="/auth/google"><strong>Sign In with Google</strong></a>
+  <h1>Sign Up</h1>
+  <% if (message) { %>
+    <p class="text-danger"><%= message %></p>
+  <% } %>
 
-    <p><strong>Already have an account?</strong> <a href="/user/signin"><strong>Sign in</strong></a></p>
-    <!-- Link to sign-in page -->
+  <form action="/user/signup" method="post">
+    <input type="text" name="username" placeholder="Username" autocomplete="off" required /><br /><br />
+    <input type="email" name="email" placeholder="Email" autocomplete="off" required /><br /><br />
+    <input type="password" name="password" placeholder="Password" autocomplete="off" required /><br /><br />
+    <input type="password" name="cpassword" placeholder="Confirm Password" autocomplete="off" required /><br /><br />
 
+    <!-- reCAPTCHA test key -->
+    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+    <br />
+
+    <button type="submit" class="btn btn-light w-100"><strong>Sign Up</strong></button>
+  </form>
+
+  <br />
+
+  <!-- Sign-up Google Auth -->
+  <a href="/auth/google"><strong>Sign In with Google</strong></a>
+
+  <p>
+    <strong>Already have an account?</strong>
+    <a href="/user/signin"><strong>Sign in</strong></a>
+  </p>
 </section>
-
